@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include "memory_system.h"
 
-// LRU (Least Recently Used) Replacement Policy
+// LRU Replacement Policy
 // ============================================================================
 // ============================================================================
 
