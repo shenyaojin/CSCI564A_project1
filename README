@@ -1,1 +1,7 @@
 计算机体系结构会惩罚每个本科没好好学C的学生 ：）
+
+- Check that DOT pdf file to grade the source code.
+
+```shell
+make grade
+```
