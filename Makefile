@@ -1,12 +1,12 @@
 SRCFILES := $(wildcard src/*.c)
 HFILES := $(wildcard src/*.h)
-PKG_CFLAGS := $(shell pkg-config --cflags libsodium)
-PKG_LIBS := $(shell pkg-config --libs libsodium)
+LIBSODIUM_DIR := src/lib/libsodium-1.0.18/build
+
 
 all: cachesim
 
 cachesim: $(SRCFILES) $(HFILES)
-	gcc -Wall -g -o cachesim $(SRCFILES) -lm $(PKG_CFLAGS) $(PKG_LIBS)
+	gcc -Wall -g -o cachesim $(SRCFILES) -lm -I$(LIBSODIUM_DIR)/include -L$(LIBSODIUM_DIR)/lib -lsodium
 
 submission: cachesim
 	./bin/makesubmission.sh

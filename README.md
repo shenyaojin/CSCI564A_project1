@@ -6,3 +6,4 @@
 - For the random number generator, please adapt the code to your own project. 
   - Different random number generators may have different properties.
 
+- I include the libsodium library in the project to generate numbers.

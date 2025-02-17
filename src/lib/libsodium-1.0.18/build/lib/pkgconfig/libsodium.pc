@@ -1,0 +1,12 @@
+prefix=/Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libsodium
+Version: 1.0.18
+Description: A modern and easy-to-use crypto library
+
+Libs: -L${libdir} -lsodium
+Libs.private:  -pthread 
+Cflags: -I${includedir}
