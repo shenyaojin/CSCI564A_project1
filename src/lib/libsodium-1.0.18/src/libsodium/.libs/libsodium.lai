@@ -14,7 +14,7 @@ library_names=''
 old_library='libsodium.a'
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags='  -pthread'
+inherited_linker_flags=' -pthread'
 
 # Libraries that this one depends upon.
 dependency_libs=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build/lib'
+libdir='/rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build/lib'
