@@ -3,11 +3,6 @@
 - Check that DOT pdf file to grade the source code.
 - Don't use my code directly for your project if you are taking this class.
 
-```shell
-make grade
-```
-
-```shell
-make
-```
+- For the random number generator, please adapt the code to your own project. 
+  - Different random number generators may have different properties.
 

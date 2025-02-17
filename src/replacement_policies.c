@@ -16,6 +16,7 @@
 #include "replacement_policies.h"
 #include <stdlib.h>
 #include "memory_system.h"
+#include <sodium.h>
 
 // LRU Replacement Policy
 // ============================================================================
@@ -327,9 +328,10 @@ static uint32_t rand_eviction_index(struct replacement_policy *replacement_polic
     struct rand_metadata *md = (struct rand_metadata *)replacement_policy->data;
     uint32_t assoc = md->associativity;
 
-    // arc4random_uniform can be used instead of rand() if desired.
-    // Here we assume something like arc4random_uniform(assoc) or rand() % assoc
-    return arc4random_uniform(assoc);
+    // arc4random_uniform
+    // return arc4random_uniform(assoc); // Only work on my Mac. :(
+    return randombytes_uniform(assoc);
+    // return rand() % assoc;
 }
 
 /**
