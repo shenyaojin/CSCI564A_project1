@@ -1,4 +1,4 @@
-prefix=/rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build
+prefix=/Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/build
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

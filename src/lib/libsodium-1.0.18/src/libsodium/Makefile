@@ -88,8 +88,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+build_triplet = arm-apple-darwin24.3.0
+host_triplet = arm-apple-darwin24.3.0
 am__append_1 = \
 	crypto_core/ed25519/ref10/fe_51/base.h \
 	crypto_core/ed25519/ref10/fe_51/base2.h \
@@ -104,29 +104,29 @@ am__append_1 = \
 #	crypto_core/ed25519/ref10/fe_25_5/fe.h \
 #	include/sodium/private/ed25519_ref10_fe_25_5.h
 
-am__append_3 = \
-	crypto_stream/salsa20/xmm6/salsa20_xmm6-asm.S \
-	crypto_stream/salsa20/xmm6/salsa20_xmm6.c \
-	crypto_stream/salsa20/xmm6/salsa20_xmm6.h
+#am__append_3 = \
+#	crypto_stream/salsa20/xmm6/salsa20_xmm6-asm.S \
+#	crypto_stream/salsa20/xmm6/salsa20_xmm6.c \
+#	crypto_stream/salsa20/xmm6/salsa20_xmm6.h
 
-#am__append_4 = \
-#	crypto_stream/salsa20/ref/salsa20_ref.c \
-#	crypto_stream/salsa20/ref/salsa20_ref.h
+am__append_4 = \
+	crypto_stream/salsa20/ref/salsa20_ref.c \
+	crypto_stream/salsa20/ref/salsa20_ref.h
 
-am__append_5 = \
-	crypto_scalarmult/curve25519/sandy2x/consts_namespace.h \
-	crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.c \
-	crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.h \
-	crypto_scalarmult/curve25519/sandy2x/fe.h \
-	crypto_scalarmult/curve25519/sandy2x/fe51.h \
-	crypto_scalarmult/curve25519/sandy2x/fe51_invert.c \
-	crypto_scalarmult/curve25519/sandy2x/fe51_namespace.h \
-	crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c \
-	crypto_scalarmult/curve25519/sandy2x/ladder.h \
-	crypto_scalarmult/curve25519/sandy2x/ladder_base.h \
-	crypto_scalarmult/curve25519/sandy2x/ladder_base_namespace.h \
-	crypto_scalarmult/curve25519/sandy2x/ladder_namespace.h \
-	crypto_scalarmult/curve25519/sandy2x/sandy2x.S
+#am__append_5 = \
+#	crypto_scalarmult/curve25519/sandy2x/consts_namespace.h \
+#	crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.c \
+#	crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.h \
+#	crypto_scalarmult/curve25519/sandy2x/fe.h \
+#	crypto_scalarmult/curve25519/sandy2x/fe51.h \
+#	crypto_scalarmult/curve25519/sandy2x/fe51_invert.c \
+#	crypto_scalarmult/curve25519/sandy2x/fe51_namespace.h \
+#	crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c \
+#	crypto_scalarmult/curve25519/sandy2x/ladder.h \
+#	crypto_scalarmult/curve25519/sandy2x/ladder_base.h \
+#	crypto_scalarmult/curve25519/sandy2x/ladder_base_namespace.h \
+#	crypto_scalarmult/curve25519/sandy2x/ladder_namespace.h \
+#	crypto_scalarmult/curve25519/sandy2x/sandy2x.S
 
 am__append_6 = \
 	crypto_box/curve25519xchacha20poly1305/box_curve25519xchacha20poly1305.c \
@@ -161,12 +161,12 @@ am__append_10 = \
 am__append_11 = \
 	crypto_pwhash/scryptsalsa208sha256/sse/pwhash_scryptsalsa208sha256_sse.c
 
-#am__append_12 = \
-#	crypto_stream/salsa20/xmm6int/salsa20_xmm6int-sse2.c \
-#	crypto_stream/salsa20/xmm6int/salsa20_xmm6int-sse2.h \
-#	crypto_stream/salsa20/xmm6int/u0.h \
-#	crypto_stream/salsa20/xmm6int/u1.h \
-#	crypto_stream/salsa20/xmm6int/u4.h
+am__append_12 = \
+	crypto_stream/salsa20/xmm6int/salsa20_xmm6int-sse2.c \
+	crypto_stream/salsa20/xmm6int/salsa20_xmm6int-sse2.h \
+	crypto_stream/salsa20/xmm6int/u0.h \
+	crypto_stream/salsa20/xmm6int/u1.h \
+	crypto_stream/salsa20/xmm6int/u4.h
 
 subdir = src/libsodium
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -386,13 +386,13 @@ am__libsodium_la_SOURCES_DIST =  \
 	crypto_stream/xchacha20/stream_xchacha20.c \
 	randombytes/sysrandom/randombytes_sysrandom.c
 am__objects_1 =
-am__objects_2 = crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6-asm.lo \
-	crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6.lo
-#am__objects_3 = crypto_stream/salsa20/ref/libsodium_la-salsa20_ref.lo
-am__objects_4 = crypto_scalarmult/curve25519/sandy2x/libsodium_la-curve25519_sandy2x.lo \
-	crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe51_invert.lo \
-	crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe_frombytes_sandy2x.lo \
-	crypto_scalarmult/curve25519/sandy2x/libsodium_la-sandy2x.lo
+#am__objects_2 = crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6-asm.lo \
+#	crypto_stream/salsa20/xmm6/libsodium_la-salsa20_xmm6.lo
+am__objects_3 = crypto_stream/salsa20/ref/libsodium_la-salsa20_ref.lo
+#am__objects_4 = crypto_scalarmult/curve25519/sandy2x/libsodium_la-curve25519_sandy2x.lo \
+#	crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe51_invert.lo \
+#	crypto_scalarmult/curve25519/sandy2x/libsodium_la-fe_frombytes_sandy2x.lo \
+#	crypto_scalarmult/curve25519/sandy2x/libsodium_la-sandy2x.lo
 am__objects_5 = crypto_box/curve25519xchacha20poly1305/libsodium_la-box_curve25519xchacha20poly1305.lo \
 	crypto_box/curve25519xchacha20poly1305/libsodium_la-box_seal_curve25519xchacha20poly1305.lo \
 	crypto_core/ed25519/libsodium_la-core_ed25519.lo \
@@ -495,7 +495,7 @@ am__libsse2_la_SOURCES_DIST =  \
 	crypto_stream/salsa20/xmm6int/u1.h \
 	crypto_stream/salsa20/xmm6int/u4.h
 am__objects_7 = crypto_pwhash/scryptsalsa208sha256/sse/libsse2_la-pwhash_scryptsalsa208sha256_sse.lo
-#am__objects_8 = crypto_stream/salsa20/xmm6int/libsse2_la-salsa20_xmm6int-sse2.lo
+am__objects_8 = crypto_stream/salsa20/xmm6int/libsse2_la-salsa20_xmm6int-sse2.lo
 am_libsse2_la_OBJECTS =  \
 	crypto_onetimeauth/poly1305/sse2/libsse2_la-poly1305_sse2.lo \
 	$(am__objects_7) $(am__objects_8)
@@ -749,45 +749,45 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing aclocal-1.16
 ALLOCA = 
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing automake-1.16
-AWK = gawk
+AUTOCONF = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing automake-1.16
+AWK = awk
 CC = gcc
 CCAS = gcc
 CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2 -pthread
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -ftls-model=local-dynamic
-CFLAGS_AESNI = -maes
-CFLAGS_AVX = -mavx
-CFLAGS_AVX2 = -mavx2
-CFLAGS_AVX512F = -mavx512f
-CFLAGS_MMX = -mmmx
-CFLAGS_PCLMUL = -mpclmul
-CFLAGS_RDRAND = -mrdrnd
-CFLAGS_SSE2 = -msse2
-CFLAGS_SSE3 = -msse3
-CFLAGS_SSE41 = -msse4.1
-CFLAGS_SSSE3 = -mssse3
+CFLAGS_AESNI = 
+CFLAGS_AVX = 
+CFLAGS_AVX2 = 
+CFLAGS_AVX512F = 
+CFLAGS_MMX = 
+CFLAGS_PCLMUL = 
+CFLAGS_RDRAND = 
+CFLAGS_SSE2 = 
+CFLAGS_SSE3 = 
+CFLAGS_SSE41 = 
+CFLAGS_SSSE3 = 
 CPP = gcc -E
 CPPFLAGS =  -D_FORTIFY_SOURCE=2
-CWFLAGS = -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wstrict-prototypes -Wswitch-enum -Wwrite-strings
+CWFLAGS = -g -O2 -pthread -fvisibility=hidden -fPIC -fPIE -fno-strict-aliasing -fno-strict-overflow -fstack-protector -Wextra -Wno-unknown-warning-option -Wbad-function-cast -Wcast-qual -Wdiv-by-zero -Wduplicated-branches -Wduplicated-cond -Wfloat-equal -Wformat=2 -Wlogical-op -Wmaybe-uninitialized -Wmisleading-indentation -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-type-limits -Wno-unknown-pragmas -Wnormalized=id -Wnull-dereference -Wold-style-declaration -Wpointer-arith -Wredundant-decls -Wrestrict -Wshorten-64-to-32 -Wsometimes-uninitialized -Wstrict-prototypes -Wswitch-enum -Wvariable-decl -Wwrite-strings
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"libsodium\" -DPACKAGE_TARNAME=\"libsodium\" -DPACKAGE_VERSION=\"1.0.18\" -DPACKAGE_STRING=\"libsodium\ 1.0.18\" -DPACKAGE_BUGREPORT=\"https://github.com/jedisct1/libsodium/issues\" -DPACKAGE_URL=\"https://github.com/jedisct1/libsodium\" -DPACKAGE=\"libsodium\" -DVERSION=\"1.0.18\" -DHAVE_PTHREAD_PRIO_INHERIT=1 -DHAVE_PTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_C_VARARRAYS=1 -DHAVE_CATCHABLE_SEGV=1 -DHAVE_CATCHABLE_ABRT=1 -DTLS=_Thread_local -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_MMINTRIN_H=1 -DHAVE_EMMINTRIN_H=1 -DHAVE_PMMINTRIN_H=1 -DHAVE_TMMINTRIN_H=1 -DHAVE_SMMINTRIN_H=1 -DHAVE_AVXINTRIN_H=1 -DHAVE_AVX2INTRIN_H=1 -DHAVE_AVX512FINTRIN_H=1 -DHAVE_WMMINTRIN_H=1 -DHAVE_RDRAND=1 -DHAVE_SYS_MMAN_H=1 -DHAVE_SYS_RANDOM_H=1 -DNATIVE_LITTLE_ENDIAN=1 -DHAVE_INLINE_ASM=1 -DHAVE_AMD64_ASM=1 -DHAVE_AVX_ASM=1 -DHAVE_TI_MODE=1 -DHAVE_CPUID=1 -DASM_HIDE_SYMBOL=.hidden -DHAVE_WEAK_SYMBOLS=1 -DCPU_UNALIGNED_ACCESS=1 -DHAVE_ATOMIC_OPS=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_MMAP=1 -DHAVE_MLOCK=1 -DHAVE_MADVISE=1 -DHAVE_MPROTECT=1 -DHAVE_GETRANDOM=1 -DHAVE_GETENTROPY=1 -DHAVE_POSIX_MEMALIGN=1 -DHAVE_GETPID=1 -DHAVE_NANOSLEEP=1 -DHAVE_EXPLICIT_BZERO=1 -DCONFIGURED=1
+DEFS = -DPACKAGE_NAME=\"libsodium\" -DPACKAGE_TARNAME=\"libsodium\" -DPACKAGE_VERSION=\"1.0.18\" -DPACKAGE_STRING=\"libsodium\ 1.0.18\" -DPACKAGE_BUGREPORT=\"https://github.com/jedisct1/libsodium/issues\" -DPACKAGE_URL=\"https://github.com/jedisct1/libsodium\" -DPACKAGE=\"libsodium\" -DVERSION=\"1.0.18\" -DHAVE_PTHREAD_PRIO_INHERIT=1 -DHAVE_PTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -D__EXTENSIONS__=1 -D_ALL_SOURCE=1 -D_GNU_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D_TANDEM_SOURCE=1 -DHAVE_C_VARARRAYS=1 -DHAVE_CATCHABLE_ABRT=1 -DTLS=_Thread_local -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_SYS_MMAN_H=1 -DHAVE_SYS_RANDOM_H=1 -DNATIVE_LITTLE_ENDIAN=1 -DHAVE_INLINE_ASM=1 -DHAVE_TI_MODE=1 -DASM_HIDE_SYMBOL=.private_extern -DHAVE_WEAK_SYMBOLS=1 -DCPU_UNALIGNED_ACCESS=1 -DHAVE_ATOMIC_OPS=1 -DHAVE_ALLOCA_H=1 -DHAVE_ALLOCA=1 -DHAVE_ARC4RANDOM=1 -DHAVE_ARC4RANDOM_BUF=1 -DHAVE_MMAP=1 -DHAVE_MLOCK=1 -DHAVE_MADVISE=1 -DHAVE_MPROTECT=1 -DHAVE_POSIX_MEMALIGN=1 -DHAVE_GETPID=1 -DHAVE_NANOSLEEP=1 -DHAVE_MEMSET_S=1 -DCONFIGURED=1
 DEPDIR = .deps
 DLLTOOL = false
 DLL_VERSION = 24
-DSYMUTIL = 
+DSYMUTIL = dsymutil
 DUMPBIN = 
-ECHO_C = 
-ECHO_N = -n
+ECHO_C = \c
+ECHO_N = 
 ECHO_T = 
 EGREP = /usr/bin/grep -E
 ENABLE_VALGRIND_drd = no
@@ -797,36 +797,36 @@ ENABLE_VALGRIND_sgcheck = no
 EXEEXT = 
 FGREP = /usr/bin/grep -F
 GREP = /usr/bin/grep
-HAVE_AMD64_ASM_V = 1
-HAVE_AVX_ASM_V = 1
-HAVE_CPUID_V = 1
+HAVE_AMD64_ASM_V = 0
+HAVE_AVX_ASM_V = 0
+HAVE_CPUID_V = 0
 HAVE_TI_MODE_V = 1
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld -m elf_x86_64
-LDFLAGS =  -pie -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack
+LD = /Library/Developer/CommandLineTools/usr/bin/ld
+LDFLAGS =  -pie
 LIBOBJS = 
 LIBS =  
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIBTOOL_DEPS = build-aux/ltmain.sh
 LIBTOOL_EXTRA_FLAGS =  -version-info 26:0:3
-LIPO = 
+LIPO = lipo
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/missing makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /usr/bin/mkdir -p
+MKDIR_P = ../../build-aux/install-sh -c -d
 NM = /usr/bin/nm -B
-NMEDIT = 
+NMEDIT = nmedit
 OBJDUMP = objdump
 OBJEXT = o
-OTOOL = 
-OTOOL64 = 
+OTOOL = otool
+OTOOL64 = :
 PACKAGE = libsodium
 PACKAGE_BUGREPORT = https://github.com/jedisct1/libsodium/issues
 PACKAGE_NAME = libsodium
@@ -853,10 +853,10 @@ TEST_LDFLAGS =
 VALGRIND = 
 VALGRIND_ENABLED = no
 VERSION = 1.0.18
-abs_builddir = /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/src/libsodium
-abs_srcdir = /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/src/libsodium
-abs_top_builddir = /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18
-abs_top_srcdir = /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18
+abs_builddir = /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/src/libsodium
+abs_srcdir = /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/src/libsodium
+abs_top_builddir = /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18
+abs_top_srcdir = /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
@@ -867,26 +867,26 @@ am__tar = tar --format=ustar -chf - "$$tardir"
 am__untar = tar -xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-build = x86_64-pc-linux-gnu
+build = arm-apple-darwin24.3.0
 build_alias = 
-build_cpu = x86_64
-build_os = linux-gnu
-build_vendor = pc
+build_cpu = arm
+build_os = darwin24.3.0
+build_vendor = apple
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
+host = arm-apple-darwin24.3.0
 host_alias = 
-host_cpu = x86_64
-host_os = linux-gnu
-host_vendor = pc
+host_cpu = arm
+host_os = darwin24.3.0
+host_vendor = apple
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/install-sh
+install_sh = ${SHELL} /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/src/lib/libsodium-1.0.18/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -895,7 +895,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /rcp/rcp42/home/shenyaojin/Documents/gitprojects/CSCI564A_project1/src/lib/libsodium-1.0.18/build
+prefix = /Users/shenyaojin/Documents/2025/csci564a/CSCI564A_project1/build
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -1004,7 +1004,7 @@ noinst_HEADERS = \
 	crypto_scalarmult/curve25519/sandy2x/ladder.S \
 	crypto_scalarmult/curve25519/sandy2x/ladder_base.S
 
-randombytes_internal_randombytes_internal_random_CFLAGS = -mrdrnd
+randombytes_internal_randombytes_internal_random_CFLAGS = 
 libsodium_la_LDFLAGS = $(AM_LDFLAGS) -export-dynamic -no-undefined \
 	$(LIBTOOL_EXTRA_FLAGS) $(am__append_7)
 libsodium_la_CPPFLAGS = \
@@ -1024,28 +1024,28 @@ noinst_LTLIBRARIES = libaesni.la libsse2.la libssse3.la libsse41.la \
 	libavx2.la libavx512f.la $(am__append_9)
 librdrand_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 librdrand_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-mrdrnd
+	
 
 librdrand_la_SOURCES = \
 	randombytes/internal/randombytes_internal_random.c
 
 libaesni_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libaesni_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2 -mssse3 -maes -mpclmul
+	   
 
 libaesni_la_SOURCES = \
 	crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c
 
 libsse2_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libsse2_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2
+	
 
 libsse2_la_SOURCES = crypto_onetimeauth/poly1305/sse2/poly1305_sse2.c \
 	crypto_onetimeauth/poly1305/sse2/poly1305_sse2.h \
 	$(am__append_11) $(am__append_12)
 libssse3_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libssse3_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2 -mssse3
+	 
 
 libssse3_la_SOURCES = \
 	crypto_generichash/blake2b/ref/blake2b-compress-ssse3.c \
@@ -1060,7 +1060,7 @@ libssse3_la_SOURCES = \
 
 libsse41_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libsse41_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2 -mssse3 -msse4.1
+	  
 
 libsse41_la_SOURCES = \
 	crypto_generichash/blake2b/ref/blake2b-compress-sse41.c \
@@ -1068,7 +1068,7 @@ libsse41_la_SOURCES = \
 
 libavx2_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libavx2_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2 -mssse3 -msse4.1 -mavx -mavx2
+	    
 
 libavx2_la_SOURCES = \
 	crypto_generichash/blake2b/ref/blake2b-compress-avx2.c \
@@ -1087,7 +1087,7 @@ libavx2_la_SOURCES = \
 
 libavx512f_la_LDFLAGS = $(libsodium_la_LDFLAGS)
 libavx512f_la_CPPFLAGS = $(libsodium_la_CPPFLAGS) \
-	-msse2 -mssse3 -msse4.1 -mavx -mavx2 -mavx512f
+	     
 
 libavx512f_la_SOURCES = \
 	crypto_pwhash/argon2/argon2-fill-block-avx512f.c \
