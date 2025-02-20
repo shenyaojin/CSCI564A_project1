@@ -2,18 +2,18 @@ First project in advanced compter architecture.
 
 - Compile the code
 
-```bash
+```sh
 make
 ```
 
 - Grade/simple
 
-```bash
+```sh
 make grade
 ```
 
 - Grade/full
 
-```bash
+```sh
 make grade-full
 ```
